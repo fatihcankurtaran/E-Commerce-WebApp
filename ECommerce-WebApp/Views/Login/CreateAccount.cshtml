@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "CreateAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <div class="container">
+        <div class="section-title">
+            <h2>BROWSE TOP SELLING PRODUCTS</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="product-item">
+                    <div class="pi-pic">
+                    </div>
+                    @using (Html.BeginForm(controllerName: "Login", actionName: "RegisterUser", method: FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input id="name" name="Name" type="text" value="" placeholder="Name">
+                        <input id="surname" name="Surname" type="text" value="" placeholder="Surname">
+                        <input id="Email" name="Email" type="email" value="" placeholder="Email">
+                        <input id="Password" name="Password" type="password" value="" placeholder="Parola">
+
+
+                        <br />
+                        <input type="submit" value="Gönder" />
+                    }
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center pt-5">
+            <button class="site-btn sb-line sb-dark">LOAD MORE</button>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/jquery-3.2.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.slicknav.min.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/jquery.nicescroll.min.js"></script>
+    <script src="~/js/jquery.zoom.min.js"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
+    <script src="~/js/main.js"></script>
+}

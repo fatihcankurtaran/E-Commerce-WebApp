@@ -34,7 +34,12 @@ namespace ECommerce_WebApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddSession(options =>
+            {
+                // 10 dakikalı Redis Timeout Süresi.
+                options.IdleTimeout = TimeSpan.FromDays(15);
+                options.Cookie.HttpOnly = true;
+            });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -54,7 +59,7 @@ namespace ECommerce_WebApp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
