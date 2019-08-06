@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.645
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce-WebApp", "ECommerce-WebApp\ECommerce-WebApp.csproj", "{ED98079C-4A3A-4EBA-B65A-E695C1D06B03}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F648C154-5A60-4D18-B5B1-1553685E2FC7} = {F648C154-5A60-4D18-B5B1-1553685E2FC7}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "E-Commerce-Api\WebApi.csproj", "{F648C154-5A60-4D18-B5B1-1553685E2FC7}"
 EndProject

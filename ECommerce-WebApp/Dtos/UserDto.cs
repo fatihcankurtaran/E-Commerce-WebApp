@@ -5,12 +5,16 @@ using System.Threading.Tasks;
 
 namespace ECommerce_WebApp.Dtos
 {
-    public class UserDto
+    public class UserDto :BaseDto
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Email { get; set; }
-        public string Pasword { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+       
+
+        public string email { get; set; }
+
+        public string Role { get; set; } = "User";
+        public string password { get; set; }
 
     }
 }
